@@ -6,6 +6,7 @@ import WelcomeSection from './components/WelcomeSection';
 import TestimonialSection from './components/TestimonialSection';
 import NewsSection from './components/NewsSection';
 import SponsorsFooter from './components/SponsorsFooter';
+import Leadership from './components/Leadership';
 import Footer from './components/Footer';
 import './index.css';
 
@@ -16,6 +17,7 @@ function App() {
       <Hero />
       <QuickActionBar />
       <WelcomeSection />
+      <Leadership />
       <TestimonialSection />
       
       {/* Banner Ad Placeholder */}

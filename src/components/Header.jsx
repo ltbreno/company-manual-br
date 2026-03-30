@@ -1,30 +1,122 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Header() {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navItems = ['Home', 'About Us', 'Members', 'Events', 'Directory', 'Join Us'];
+
   return (
-    <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0', background: '#fff', borderBottom: '1px solid #eaeaea' }}>
-      <div style={{ padding: '20px' }}>
-        <img src="https://via.placeholder.com/200x60?text=LOGO+PLACEHOLDER" alt="Logo" style={{ height: '60px' }} />
+    <header style={{
+      position: 'sticky',
+      top: 0,
+      zIndex: 1000,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      padding: scrolled ? '10px 40px' : '16px 40px',
+      background: scrolled ? 'rgba(255,255,255,0.97)' : 'white',
+      backdropFilter: scrolled ? 'blur(20px)' : 'none',
+      borderBottom: `1px solid ${scrolled ? 'var(--border-light)' : 'transparent'}`,
+      boxShadow: scrolled ? 'var(--shadow-sm)' : 'none',
+      transition: 'all var(--transition-smooth)',
+    }}>
+      {/* Logo */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <div style={{
+          width: '44px',
+          height: '44px',
+          borderRadius: '10px',
+          background: 'linear-gradient(135deg, var(--secondary-color), var(--primary-color))',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          color: 'white',
+          fontWeight: '900',
+          fontSize: '18px',
+          fontFamily: 'var(--font-display)',
+        }}>
+          GC
+        </div>
+        <div>
+          <div style={{
+            fontFamily: 'var(--font-display)',
+            fontWeight: '800',
+            fontSize: '16px',
+            color: 'var(--secondary-color)',
+            lineHeight: '1.1',
+            letterSpacing: '-0.3px',
+          }}>
+            Global Chamber
+          </div>
+          <div style={{
+            fontSize: '10px',
+            fontWeight: '600',
+            color: 'var(--text-muted)',
+            textTransform: 'uppercase',
+            letterSpacing: '2px',
+          }}>
+            of Commerce
+          </div>
+        </div>
       </div>
-      
-      <nav style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-        <ul style={{ display: 'flex', gap: '20px', fontWeight: 'bold', fontSize: '12px' }}>
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">ABOUT US ▾</a></li>
-          <li><a href="#">MEMBER HUB ▾</a></li>
-          <li><a href="#">EVENTS ▾</a></li>
-          <li><a href="#">JOIN US</a></li>
-          <li><a href="#">RESOURCES ▾</a></li>
-          <li><a href="#">MORE ▾</a></li>
+
+      {/* Nav */}
+      <nav>
+        <ul style={{
+          display: 'flex',
+          gap: '8px',
+          alignItems: 'center',
+        }}>
+          {navItems.map((item, i) => (
+            <li key={i}>
+              <a
+                href="#"
+                style={{
+                  padding: '8px 16px',
+                  fontSize: '13px',
+                  fontWeight: '600',
+                  color: 'var(--text-dark)',
+                  letterSpacing: '0.3px',
+                  borderRadius: 'var(--radius-sm)',
+                  transition: 'all var(--transition-fast)',
+                  display: 'block',
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.color = 'var(--primary-color)';
+                  e.target.style.background = 'var(--bg-section-alt)';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.color = 'var(--text-dark)';
+                  e.target.style.background = 'transparent';
+                }}
+              >
+                {item}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
 
-      <div style={{ background: 'var(--secondary-color)', color: 'white', padding: '20px 40px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', clipPath: 'polygon(10% 0, 100% 0, 100% 100%, 0 100%)' }}>
-        <div style={{ fontWeight: 'bold', fontSize: '14px', marginBottom: '5px' }}>
-          CALL US :<br/>
-          (123) 456-7890
-        </div>
-        <button className="btn" style={{ padding: '5px 30px', fontSize: '12px' }}>LOGIN</button>
+      {/* CTA */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+        <a href="#" style={{
+          fontSize: '13px',
+          fontWeight: '600',
+          color: 'var(--secondary-color)',
+        }}>Login</a>
+        <button className="btn" style={{
+          padding: '10px 24px',
+          fontSize: '12px',
+        }}>
+          Become a Member
+        </button>
       </div>
     </header>
   );
