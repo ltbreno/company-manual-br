@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import fernandoImg from '../assets/fernando.jpeg';
 import carlosImg from '../assets/FotoX.png';
+import calebImg from '../assets/caleb.jpeg';
+import ceciliaImg from '../assets/cecilia.jpeg';
 
 const leaders = [
   {
@@ -24,6 +26,27 @@ const leaders = [
       'Living in the United States for nearly 10 years, he enhanced his expertise with a U.S. Public Policy certification from Harvard. Carlos built a solid American career path, currently serving as a Business Development Specialist at the renowned law firm Bogin, Munns & Munns.',
       'His deep connection to the business community is further evidenced by his tenure as a member of the Central Florida Brazilian American Chamber of Commerce.',
       'A devout Christian and a musician in his spare time, Carlos brings to the Chamber\'s Vice Presidency the loyalty, determination, and pursuit of excellence that define his life.',
+    ],
+  },
+  {
+    name: 'Caleb Flugum',
+    role: 'Advisory Board',
+    image: calebImg,
+    bio: [
+      'Caleb Flugum is a results-driven business professional with over 15 years of experience in a family-owned business, where he has played a key role in sustaining growth, strengthening operations, and building long-term client relationships. His background in real estate and lending equips him with an understanding of market dynamics, financing strategies, and value-driven decision-making.',
+      'With a global perspective shaped by international travel and hands-on mission work, Caleb brings cultural awareness, adaptability, and a people-first mindset to his professional endeavors. He is equally passionate about leadership beyond the workplace, actively coaching sports and mentoring individuals to develop discipline, confidence, and a competitive edge.',
+      'Caleb is recognized for his integrity, strategic thinking, and ability to execute with focus and consistency. He thrives in environments that demand leadership, accountability, and vision, and is committed to creating meaningful impact across business, community, and personal development.',
+    ],
+  },
+  {
+    name: 'Cecilia Alvarez',
+    role: 'Board of Governors',
+    image: ceciliaImg,
+    bio: [
+      'Cecilia Alvarez is an accomplished education leader and business professional with over a decade of experience in operations, strategic growth, and team leadership. She is the Founder of Fiorella Preparatory School, where she has successfully built and managed a thriving educational institution from the ground up, overseeing all aspects of development, curriculum implementation, and daily operations.',
+      'With a strong background in sales, marketing, and financial management, Cecilia has a proven track record of driving revenue growth, developing high-performing teams, and creating impactful business strategies. Prior to her work in education, she held leadership roles in staffing and media organizations, where she consistently exceeded performance goals and led multi-market operations.',
+      'Cecilia holds a Bachelor of Science in Psychology from Florida International University and is fluent in both English and Spanish and a beginner in Portuguese. She is passionate about education, community engagement, and empowering future generations through high-quality learning environments.',
+      'Her extensive background in thought leadership includes serving with the Greater Miami Chamber of Commerce (2007–2014) on the GMCC HYPE Committee and as a member of the Board of Governors (2013–2014).',
     ],
   },
 ];
