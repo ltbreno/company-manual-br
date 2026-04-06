@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImg from '../assets/logo.png';
 
 function Footer() {
   return (
@@ -6,7 +7,7 @@ function Footer() {
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '30px' }}>
         
         <div style={{ flex: 1, minWidth: '250px' }}>
-          <img src="https://via.placeholder.com/200x60?text=LOGO+PLACEHOLDER" alt="Logo" style={{ marginBottom: '20px', filter: 'grayscale(1) brightness(2)' }} />
+          <img src={logoImg} alt="Chamber Logo" style={{ height: '90px', width: 'auto', marginBottom: '25px' }} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
             <a href="#">Privacy Policy</a>
             <a href="#">Texting Policy</a>

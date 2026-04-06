@@ -3,6 +3,7 @@ import fernandoImg from '../assets/fernando.jpeg';
 import carlosImg from '../assets/FotoX.png';
 import calebImg from '../assets/caleb.jpeg';
 import ceciliaImg from '../assets/cecilia.jpeg';
+import rodrigoImg from '../assets/rodrigo.png';
 
 const leaders = [
   {
@@ -47,6 +48,18 @@ const leaders = [
       'With a strong background in sales, marketing, and financial management, Cecilia has a proven track record of driving revenue growth, developing high-performing teams, and creating impactful business strategies. Prior to her work in education, she held leadership roles in staffing and media organizations, where she consistently exceeded performance goals and led multi-market operations.',
       'Cecilia holds a Bachelor of Science in Psychology from Florida International University and is fluent in both English and Spanish and a beginner in Portuguese. She is passionate about education, community engagement, and empowering future generations through high-quality learning environments.',
       'Her extensive background in thought leadership includes serving with the Greater Miami Chamber of Commerce (2007–2014) on the GMCC HYPE Committee and as a member of the Board of Governors (2013–2014).',
+    ],
+  },
+  {
+    name: 'Rodrigo Moreira',
+    role: 'Director of Marketing',
+    image: rodrigoImg,
+    bio: [
+      'Rodrigo Moreira is a marketing strategist and international business consultant with over 18 years of experience in franchising, brand expansion, and market development across Brazil and the United States.',
+      'Throughout his career, Rodrigo has contributed to the expansion of major education and franchise brands, including his work with Pearson and its portfolio in Brazil. He has supported the negotiation of more than 1,000 franchise units and worked with over 10 brands in structuring and developing franchise models, helping businesses become scalable and ready for growth.',
+      'He currently focuses on international expansion, connecting companies and investors between Brazil and the U.S., with expertise in marketing strategy, sales intelligence, and business development.',
+      'Rodrigo also served as a university professor in Brazil for over four years, teaching marketing and business administration. He holds a Bachelor’s degree in Business Administration with a focus on Marketing and an MBA in Business Management from INPG, as well as an MBA in Neuromarketing from UNYLEYA.',
+      'As Director of Marketing, Rodrigo brings a results-driven approach to strengthen business connections and support the growth of the Chamber’s network.',
     ],
   },
 ];

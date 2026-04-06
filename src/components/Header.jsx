@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logoImg from '../assets/logo.png';
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -28,43 +29,16 @@ function Header() {
       transition: 'all var(--transition-smooth)',
     }}>
       {/* Logo */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-        <div style={{
-          width: '44px',
-          height: '44px',
-          borderRadius: '10px',
-          background: 'linear-gradient(135deg, var(--secondary-color), var(--primary-color))',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: 'white',
-          fontWeight: '900',
-          fontSize: '18px',
-          fontFamily: 'var(--font-display)',
-        }}>
-          GC
-        </div>
-        <div>
-          <div style={{
-            fontFamily: 'var(--font-display)',
-            fontWeight: '800',
-            fontSize: '16px',
-            color: 'var(--secondary-color)',
-            lineHeight: '1.1',
-            letterSpacing: '-0.3px',
-          }}>
-            Global Chamber
-          </div>
-          <div style={{
-            fontSize: '10px',
-            fontWeight: '600',
-            color: 'var(--text-muted)',
-            textTransform: 'uppercase',
-            letterSpacing: '2px',
-          }}>
-            of Commerce
-          </div>
-        </div>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <img
+          src={logoImg}
+          alt="Chamber Logo"
+          style={{
+            height: scrolled ? '60px' : '85px',
+            width: 'auto',
+            transition: 'all var(--transition-smooth)'
+          }}
+        />
       </div>
 
       {/* Nav */}
